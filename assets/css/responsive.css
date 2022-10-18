@@ -1,0 +1,88 @@
+
+/* max-PC responsvie */
+@media only screen and (max-width: 1440px) {
+    .banner{
+        min-height: 720px;
+    }
+}
+/* PC responsvie */
+@media only screen and (max-width: 1024px) {
+    .banner{
+        min-height: 520px;
+    }
+}
+/* table responsvie */
+@media only screen and (max-width: 992px) {
+  #header{
+    background-color: #ffffffe6 !important;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+.badge-cart{
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    right: -8px;
+}
+
+
+}
+/* table responsvie */
+@media only screen and (max-width: 768px) {
+    .banner{
+        min-height: 320px;
+    }
+    .banner .banner-content{
+        left: 50%;
+        top: 55%;
+    }
+    .banner-content-title{
+        font-size: 32px;
+    }
+    .banner-content-subtitle p{
+        font-size: 18px;
+    }
+    .banner-mobile-backdrop{
+        opacity: 1;
+    }
+    .small-banner:after{
+        opacity: 1;
+    }
+    .link-categogries h6{
+        font-size: 14px;
+    }
+
+}
+/* mobile responsvie */
+@media only screen and (max-width: 425px) {
+
+    .banner .banner-content{
+        top: 55%;
+    }
+    .banner{
+        min-height: 280px;
+    }
+    .navbar-brand{
+        max-width: 160px;
+    }
+    .header-user li a{
+        font-size: 8px;
+    }
+    .header-user li a>svg{
+        max-width: 18px;
+    }
+}
+
+
+/* mobile responsvie */
+@media only screen and (max-width: 375px) {
+
+    .navbar-brand{
+        max-width: 120px;
+    }
+    .banner-content-title{
+        font-size: 24px;
+    }
+
+}
+

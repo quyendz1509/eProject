@@ -1,0 +1,500 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "title": "t-shirt",
+      "images": "./assets/images/categogries/t-shirt.jpg",
+      "slug": "t-shirt"
+    },
+    {
+      "id": 2,
+      "title": "Outerwear",
+      "images": "./assets/images/categogries/outerweear.jpg",
+      "slug": "outer-wear"
+    },
+    {
+      "id": 3,
+      "title": "Sport Utility Wear",
+      "images": "./assets/images/categogries/sport.jpg",
+      "slug": "sport-wear"
+    },
+    {
+      "id": 4,
+      "title": "dresses",
+      "images": "./assets/images/categogries/dresses.jpg",
+      "slug": "dress"
+    },
+    {
+      "id": 7,
+      "title": "Down",
+      "images": "./assets/images/categogries/down.jpg",
+      "slug": "down"
+    },
+    {
+      "id": 8,
+      "title": "bottoms",
+      "images": "./assets/images/categogries/bottoms.jpg",
+      "slug":"bottoms"
+    },
+    {
+      "id": 9,
+      "title": "sweater",
+      "images": "./assets/images/categogries/sweater.jpg",
+      "slug" : "sweater"
+    },
+    {
+      "id": 10,
+      "title": "Shirts & Blouses",
+      "images": "./assets/images/categogries/shirt.jpg",
+      "slug": "shirt-blouses"
+    }
+  ],
+
+  "products": [
+    {
+      "id": 1,
+      "name": "Warm Padded Quilted Jacket",
+      "price": 62.33,
+      "categories": "sweater",
+      "images": "./assets/images/product/sp1.jpg",
+      "recommended": true,
+      "type": "hot",
+      "sale": 0,
+      "salePrice": 42.33,
+      "sizing": ["m","l"],
+      "images_list": [
+        "./assets/images/product/sp1_1.jpg",
+        "./assets/images/product/sp1_2.jpg",
+        "./assets/images/product/sp1_3.jpg",
+        "./assets/images/product/sp1_4.jpg",
+        "./assets/images/product/sp1_5.jpg"
+      ],
+      "smalldes" :"Padded with high loft batting - Durable water-repellent coating - Pocketable design.",
+      "description": "- Padded with high loft batting.<br>- Durable water-repellent coating.<br>- Pocketable design.<br>- Anti-static lining.<br>- The collar can be folded inward to stay hidden under a V-neck coat."
+    },
+    {
+      "id": 2,
+      "name": "Warm Padded Quilted Vest",
+      "price": 62.33,
+      "categories": "down",
+      "images": "./assets/images/product/sp2.jpg",
+      "recommended": true,
+      "type": "hot",
+      "sale": 0,
+      "salePrice": 42.33,
+      "sizing": ["s","m","l"],
+      "images_list": [
+        "./assets/images/product/sp2_1.jpg",
+        "./assets/images/product/sp2_2.jpg",
+        "./assets/images/product/sp2_3.jpg",
+        "./assets/images/product/sp2_4.jpg",
+        "./assets/images/product/sp2_5.jpg"
+      ],
+      "smalldes" :"Padded with high loft batting - Durable water-repellent coating - Pocketable design.",
+      "description": "- Padded with high loft batting.<br>- Anti-static lining.<br>- Casual diamond quilting design makes a great inner or outer layer.<br>- The front placket and collar are piped with grosgrain tape for extra durability and a stylish look.<br>- The collar fold inward to stay hidden under a V-neck coat."
+    },
+    {
+      "id": 3,
+      "name": "Ultra Light Down Relaxed Coat",
+      "price": 62.33,
+      "categories": "sweater",
+      "images": "./assets/images/product/sp3.jpg",
+      "recommended": true,
+      "type": "hot",
+      "sale": 0,
+      "salePrice": 42.33,
+      "sizing": ["s","m","l"],
+      "images_list": [
+        "./assets/images/product/sp3_1.jpg",
+        "./assets/images/product/sp3_2.jpg",
+        "./assets/images/product/sp3_3.jpg",
+        "./assets/images/product/sp3_4.jpg",
+        "./assets/images/product/sp3_5.jpg"
+      ],
+      "smalldes" :"Padded with high loft batting - Durable water-repellent coating - Pocketable design.",
+      "description": "- Soft, lightweight 10-denier fabric.<br>- Anti-static lining.<br>-750+ Fill Power* high quality down. *by DFB Measurement method<br>-No down pack for Ultra Light Weight.<br>-Pocketable design. Including its own carrying bag.<br>- Large diamond quilting pattern for a casual look.<br>- Thicker, softer, fluffier down.<br>- Updated collar for easy layering.<br>- Streamlined side seam pockets make layering easier.<br>- Quilted look goes with casual styles.<br>- Wear as an inner or outer down layer."
+    },
+    {
+      "id": 4,
+      "name": "Ultralight Down Vest",
+      "price": 62.33,
+      "categories": "outer-wear",
+      "images": "./assets/images/product/sp4.jpg",
+      "recommended": true,
+      "type": "hot",
+      "sale": 0,
+      "salePrice": 42.33,
+      "sizing": ["s","m","l"],
+      "images_list": [
+        "./assets/images/product/sp4_1.jpg",
+        "./assets/images/product/sp4_2.jpg",
+        "./assets/images/product/sp4_3.jpg",
+        "./assets/images/product/sp4_4.jpg",
+        "./assets/images/product/sp4_5.jpg"
+      ],
+      "smalldes" :"Padded with high loft batting - Durable water-repellent coating - Pocketable design.",
+      "description": "The fabric and cut have been modified to create a more versatile style for everyday wear.<br>- A more matte texture, perfect for creating informal looks.<br>- Durable water resistant coating.<br>- Pocket design.<br>- Antistatic lining.<br>- The new cropped boxy silhouette goes great with high-waisted skirts and pants.<br>- Perfect for playing sports or everyday.<br>- You can wear it under other outerwear to provide extra warmth and color."
+    },
+    {
+      "id": 5,
+      "name": "Extra Fine Merino Crew Neck Long-Sleeve Sweater",
+      "price": 49.90,
+      "categories": "outer-wear",
+      "images": "./assets/images/product/sp5.jpg",
+      "recommended": true,
+      "type": "hot",
+      "sale": 0,
+      "salePrice": 42.33,
+      "sizing": ["s","m","l"],
+      "images_list": [
+        "./assets/images/product/sp5_1.webp",
+        "./assets/images/product/sp5_2.webp",
+        "./assets/images/product/sp5_3.webp",
+        "./assets/images/product/sp5_4.webp",
+        "./assets/images/product/sp5_5.webp"
+      ],
+      "smalldes" :"Padded with high loft batting - Durable water-repellent coating - Pocketable design.",
+      "description": "- Made of 19.5 micron extra-fine Merino wool for a glossy sheen and smooth feel.<br>- Machine-washable with special processing to prevent pilling. *Shape to dry after washing.<br>- New, more durable construction with a double collar and updated ribbing at the sleeves and hem.<br>- Sleek silhouette.<br>- A versatile design you can style your own way.<br>- This timeless sweater is a classic wardrobe piece."
+    },
+    {
+      "id": 6,
+      "name": "Fluffy Yarn Fleece Full-Zip Jacket",
+      "price": 39.90,
+      "categories": "shirt-blouses",
+      "images": "./assets/images/product/sp6.jpg",
+      "recommended": true,
+      "type": "hot",
+      "sale": 0,
+      "salePrice": 42.33,
+      "sizing": ["s","m","l"],
+      "images_list": [
+        "./assets/images/product/sp6_1.webp",
+        "./assets/images/product/sp6_2.webp",
+        "./assets/images/product/sp6_3.webp",
+        "./assets/images/product/sp6_4.webp",
+        "./assets/images/product/sp6_5.webp"
+      ],
+      "smalldes" :"Padded with high loft batting - Durable water-repellent coating - Pocketable design.",
+      "description": "- Now made of 100% recycled material.<br>- Zipper now contains recycled material.<br>- Longer pile fleece for a more fluffy feel.<br>- Classic design with set-in sleeves.<br>- The zipper pull has been updated to a minimal, stylish design.<br>- Versatile design for sports, outdoor, or everyday styling."
+    },
+    {
+      "id": 7,
+      "name": "Windproof Outer Fleece Jacket",
+      "price": 59.90,
+      "categories": "sweater",
+      "images": "./assets/images/product/sp7.jpg",
+      "recommended": false,
+      "type": "hot",
+      "sale": 0,
+      "salePrice": 42.33,
+      "sizing": ["s","m","l","xl"],
+      "images_list": [
+        "./assets/images/product/sp7_1.webp",
+        "./assets/images/product/sp7_2.webp",
+        "./assets/images/product/sp7_3.webp",
+        "./assets/images/product/sp7_4.webp",
+        "./assets/images/product/sp7_5.webp"
+      ],
+      "smalldes" :"Padded with high loft batting - Durable water-repellent coating - Pocketable design.",
+      "description": "- Fleece outerwear with windproof technology.<br>- Longer length coat with shirt-jacket details.<br>- The loose boxy silhouette makes for easy layering.<br>- Workwear-style design adds a casual feel to everyday outfits.<br>- There may be variations in the appearance of the fleece due to the nature of the fabric and sewing process. These variations are managed by our strict production controls."
+    },
+    {
+      "id": 8,
+      "name": "Premium Lambswool Ribbed Cardigan",
+      "price": 69.90,
+      "categories": "shirt-blouses",
+      "images": "./assets/images/product/sp8.jpg",
+      "recommended": false,
+      "type": "hot",
+      "sale": 1,
+      "salePrice": 42.33,
+      "sizing": ["s","m","l","xl"],
+      "images_list": [
+        "./assets/images/product/sp8_1.webp",
+        "./assets/images/product/sp8_2.webp",
+        "./assets/images/product/sp8_3.webp",
+        "./assets/images/product/sp8_4.webp",
+        "./assets/images/product/sp8_5.webp"
+      ],
+      "smalldes" :"Padded with high loft batting - Durable water-repellent coating - Pocketable design.",
+      "description": "The Uniqlo U collection is the realization of a dedicated and skilled team of international designers based at our Paris Research and Development Center led by Artistic Director Christophe Lemaire.<br><br>- Cardigan rib knit made with soft 100% premium wool.<br>- Slightly cropped length and a relaxed fit.<br>- Features a ribbed hem and cuffs, and a full needle stitched placket that highlights the V-neck line.<br>- Distinctive saddle shoulder design.<br>- Lightweight yet warm.<br>- Incredibly soft and comfortable.<br>- Great for wearing on its own or layering"
+    },
+    {
+      "id": 9,
+      "name": "Mermaid Skirt",
+      "price": 39.3,
+      "categories": "dress",
+      "images": "./assets/images/product/sp9.jpg",
+      "recommended": false,
+      "type": "hot",
+      "sale": 1,
+      "salePrice": 42.33,
+      "sizing": ["s","m","l","xl"],
+      "images_list": [
+        "./assets/images/product/sp9_1.webp",
+        "./assets/images/product/sp9_2.webp",
+        "./assets/images/product/sp9_3.webp",
+        "./assets/images/product/sp9_4.webp",
+        "./assets/images/product/sp9_5.webp"
+      ],
+      "smalldes" :"Padded with high loft batting - Durable water-repellent coating - Pocketable design.",
+      "description": "- Medium-weight flannel fabric.<br>- Brushed surface for a soft touch.<br>- Fabric with a smooth drape.<br>- Flattering mermaid silhouette.<br>- Easy to dress up or down.<br>- High waist pairs well with cropped tops.<br>- With a sleek fit at the waist, it also looks great with tunic length and voluminous tops."
+    },
+    {
+      "id": 10,
+      "name": "Ultra Light Down Shiny Puffer Vest",
+      "price": 79.90,
+      "categories": "t-shirt",
+      "images": "./assets/images/product/sp10.jpg",
+      "recommended": false,
+      "type": "hot",
+      "sale": 1,
+      "salePrice": 42.33,
+      "sizing": ["s","m","xl"],
+      "images_list": [
+        "./assets/images/product/sp10_1.webp",
+        "./assets/images/product/sp10_2.webp",
+        "./assets/images/product/sp10_3.webp",
+        "./assets/images/product/sp10_4.webp",
+        "./assets/images/product/sp10_5.webp"
+      ],
+      "smalldes" :"Padded with high loft batting - Durable water-repellent coating - Pocketable design.",
+      "description": "- Shiny fabric.<br>- Water-repellent coating for light rain. *THE FINISH IS NOT PERMANENT.<br>- Anti-static lining.<br>-750+ Fill Power* high quality down. *by DFB Measurement method.<br>-No down pack for Ultra Light Weight.<br>-Pocketable design. Including its own carrying bag.<br>- Waist-length design with a longer hem at the back for extra warmth."
+    },
+    {
+      "id": 11,
+      "name": "Brushed Jersey Shirt Jacket",
+      "price": 59.3,
+      "categories": "t-shirt",
+      "images": "./assets/images/product/sp11.jpg",
+      "recommended": false,
+      "type": "hot",
+      "sale": 1,
+      "salePrice": 42.33,
+      "sizing": ["s","l","xl"],
+      "images_list": [
+        "./assets/images/product/sp11_1.webp",
+        "./assets/images/product/sp11_2.webp",
+        "./assets/images/product/sp11_3.webp",
+        "./assets/images/product/sp11_4.webp",
+        "./assets/images/product/sp11_5.webp"
+      ],
+      "smalldes" :"Padded with high loft batting - Durable water-repellent coating - Pocketable design.",
+      "description": "- The silhouette has a relaxed feel, but has been updated to look sleek and long.<br>- Mélange is incorporated to give the material an expressive feel."
+    },
+    {
+      "id": 12,
+      "name": "HEATTECH Crew Neck Long-Sleeve T-Shirt (2021 Edition)",
+      "price": 32.33,
+      "categories": "T-shirt",
+      "images": "./assets/images/product/sp12.jpg",
+      "recommended": false,
+      "type": "hot",
+      "sale": 1,
+      "salePrice": 42.33,
+      "sizing": ["s","m","l","xl"],
+      "images_list": [
+        "./assets/images/product/sp12_1.jpg",
+        "./assets/images/product/sp12_2.webp"
+      ],
+      "smalldes" :"Padded with high loft batting - Durable water-repellent coating - Pocketable design.",
+      "description": "-Narrow crew neck in a solid color.<br>- A versatile inner layer providing warmth around the neckline.<br>- Incorporates a collar for a stylish casual look."
+    },
+    {
+      "id": 13,
+      "name": "HEATTECH Ultra Warm High Neck T-Shirt",
+      "price": 24.22,
+      "categories": "t-shirt",
+      "images": "./assets/images/product/sp13.jpg",
+      "recommended": false,
+      "type": "hot",
+      "sale": 1,
+      "salePrice": 42.33,
+      "sizing": ["s","m","xl"],
+      "images_list": [
+        "./assets/images/product/sp13_1.webp",
+        "./assets/images/product/sp13_2.jpg"
+      ],
+      "smalldes" :"Padded with high loft batting - Durable water-repellent coating - Pocketable design.",
+      "description": "- 2.25 times warmer than our regular HEATTECH.<br>- A warm layer with a soft brushed lining.<br>- High neck with a comfortable fit."
+    },
+    {
+      "id": 14,
+      "name": "Brushed Short Coat",
+      "price": 129.42,
+      "categories": "sport-wear",
+      "images": "./assets/images/product/sp14.jpg",
+      "recommended": false,
+      "type": "hot",
+      "sale": 1,
+      "salePrice": 42.33,
+      "sizing": ["s","m","l","xl"],
+      "images_list": [
+        "./assets/images/product/sp14_1.webp",
+        "./assets/images/product/sp14_2.webp",
+        "./assets/images/product/sp14_3.webp",
+        "./assets/images/product/sp14_4.webp",
+        "./assets/images/product/sp14_5.webp"
+      ],
+      "smalldes" :"Padded with high loft batting - Durable water-repellent coating - Pocketable design.",
+      "description": "- Comfortable, stretchy jersey fabric with a soft texture.<br>- Hip-length coat with an A-line silhouette.<br>- The length pairs well with any bottoms."
+    },
+    {
+      "id": 15,
+      "name": "Seamless Down Long Coat",
+      "price": 199.3,
+      "categories": "bottoms",
+      "images": "./assets/images/product/sp15.jpg",
+      "recommended": false,
+      "type": "new",
+      "sale": 1,
+      "salePrice": 42.33,
+      "sizing": ["s","m","l","xl"],
+      "images_list": [
+        "./assets/images/product/sp15_1.webp",
+        "./assets/images/product/sp15_2.webp",
+        "./assets/images/product/sp15_3.webp",
+        "./assets/images/product/sp15_4.webp",
+        "./assets/images/product/sp15_5.webp",
+        "./assets/images/product/sp15_6.webp",
+        "./assets/images/product/sp15_7.webp"
+      ],
+      "smalldes" :"Padded with high loft batting - Durable water-repellent coating - Pocketable design.",
+      "description": "- Durable water-repellent coating for light rain. *A water-repellent coating is applied to the surface of the fabric for a longer-lasting water-repellent effect.THE FINISH IS NOT PERMANENT.<br>- Windproof design.<br>- Lightweight fabric.<br>- The shoulder line was moved back to make the down more water resistant.<br>- The down thickness, cut, and zipper have been updated for a more casual look.<br>- Special stitching makes this down extra wind and water resistant."
+    },
+    {
+      "id": 16,
+      "name": "Ribbed High Neck Long Sleeve T-Shirt",
+      "price": 24.90,
+      "categories": "sport-wear",
+      "images": "./assets/images/product/sp16.jpg",
+      "recommended": false,
+      "type": "new",
+      "sale": 1,
+      "salePrice": 42.33,
+      "sizing": ["s","m","xl"],
+      "images_list": [
+        "./assets/images/product/sp16_1.webp",
+        "./assets/images/product/sp16_2.webp",
+        "./assets/images/product/sp16_3.webp",
+        "./assets/images/product/sp16_4.webp",
+        "./assets/images/product/sp16_5.webp",
+        "./assets/images/product/sp16_6.webp"
+      ],
+      "smalldes" :"Padded with high loft batting - Durable water-repellent coating - Pocketable design.",
+      "description": "- Moderately thick ribbed fabric.<br>- Durable, supple fabric with plenty of stretch.<br>- Wide ribbing for a textured finish.<br>- In response to customer feedback, both body and sleeves have been made slightly longer.<br>- A high neck T- shirt with a slim cut.<br>- Perfectly fitted feel."
+    },
+    {
+      "id": 17,
+      "name": "3D Knit Cashmere Crew Neck Long-Sleeve Sweater",
+      "price": 129.90,
+      "categories": "down",
+      "images": "./assets/images/product/sp17.jpg",
+      "recommended": false,
+      "type": "new",
+      "sale": 1,
+      "salePrice": 42.33,
+      "sizing": ["s","m","l","xl"],
+      "images_list": [
+        "./assets/images/product/sp17_1.webp",
+        "./assets/images/product/sp17_2.webp",
+        "./assets/images/product/sp17_3.webp",
+        "./assets/images/product/sp17_4.jpg",
+        "./assets/images/product/sp17_5.webp"
+      ],
+      "smalldes" :"Padded with high loft batting - Durable water-repellent coating - Pocketable design.",
+      "description": "Made of 100% cashmere, known as the jewel of fabrics, which is light, warm, and smooth to the touch.<br>- The yarn count is adjusted for the WHOLEGARMENT machine, and the tight knit creates a durable feel.<br>- Thanks to pilling-resistant processing, it can be hand-washed and lasts longer. *We recommend drying this sweater flat after washing and folding it when storing.<br>- A basic sweater that fits all body types, knit in a unique WHOLEGARMENT centripetal pattern. *WHOLEGARMENT is a registered trademark of the SHIMA SEIKI Corporation.<br>- Sleek look despite the relaxed fit.<br>- The cuffs, hem, and neck line are made with a special threading technique to prevent stretching and create a durable construction.- Coordinates with many outfits for a variety of occasions.<br>"
+    },
+    {
+      "id": 18,
+      "name": "Wool Blend Long Coat",
+      "price": 159.32,
+      "categories": "down",
+      "images": "./assets/images/product/sp18.jpg",
+      "recommended": false,
+      "type": "new",
+      "sale": 1,
+      "salePrice": 42.33,
+      "sizing": ["s","m","l"],
+      "images_list": [
+        "./assets/images/product/sp18_1.webp",
+        "./assets/images/product/sp18_2.webp",
+        "./assets/images/product/sp18_3.webp",
+        "./assets/images/product/sp18_4.webp",
+        "./assets/images/product/sp18_5.webp",
+        "./assets/images/product/sp18_6.webp",
+        "./assets/images/product/sp18_7.jpg"
+
+      ],
+      "smalldes" :"Padded with high loft batting - Durable water-repellent coating - Pocketable design.",
+      "description": "- Preshrunk double-faced fabric with a premium look.<br>- Relaxed fit and drape that showcases the texture of the fabric.<br>- The silhouette adjusts with a belt at the waist.<br>- Removable belt.<br>- Oversized collar.<br>- A coat that anyone can wear, great for styles from refined to modern.<br>-We recommend sizing down for a more true to size fit."
+    },
+    {
+      "id": 19,
+      "name": "Windproof Outer Single Breasted Fleece Coat",
+      "price": 79.9,
+      "categories": "dress",
+      "images": "./assets/images/product/sp19.jpg",
+      "recommended": false,
+      "type": "new",
+      "sale": 1,
+      "salePrice": 42.33,
+      "sizing": ["s","m","l","xl"],
+      "images_list": [
+        "./assets/images/product/sp19_1.webp",
+        "./assets/images/product/sp19_2.webp",
+        "./assets/images/product/sp19_3.webp",
+        "./assets/images/product/sp19_4.webp",
+        "./assets/images/product/sp19_5.webp",
+        "./assets/images/product/sp19_6.webp"
+
+      ],
+      "smalldes" :"Padded with high loft batting - Durable water-repellent coating - Pocketable design.",
+      "description": "- Fleece outerwear with windproof technology.<br>- A mid-length coat with a soutien collar and buttoned design that creates a casual yet modern feel.<br>- Stylish cocoon silhouette for easy layering.<br>- There may be variations in the appearance of the fleece due to the nature of the fabric and sewing process. These variations are managed by our strict production controls."
+    },
+    {
+      "id": 20,
+      "name": "3D Knit Cotton Dolman Long-Sleeve Sweater",
+      "price": 39.90,
+      "categories": "shirt-blouses",
+      "images": "./assets/images/product/sp20.jpg",
+      "recommended": false,
+      "type": "new",
+      "sale": 1,
+      "salePrice": 42.33,
+      "sizing": ["s","m","l","xl"],
+      "images_list": [
+        "./assets/images/product/sp20_1.webp",
+        "./assets/images/product/sp20_2.webp",
+        "./assets/images/product/sp20_3.webp",
+        "./assets/images/product/sp20_4.webp",
+        "./assets/images/product/sp20_5.webp"
+
+      ],
+      "smalldes" :"Padded with high loft batting - Durable water-repellent coating - Pocketable design.",
+      "description": "- Comfortable 100% cotton. *This item should be stored folded, as it is prone to size and shape changes when hung on hangers.<br>- Designed with dolman sleeves for added volume."
+    },
+    {
+      "id": 21,
+      "name": "Ribbed Cropped Short Sleeve T-Shirt",
+      "price": 14.90,
+      "categories": "shirt-blouses",
+      "images": "./assets/images/product/sp21.jpg",
+      "recommended": false,
+      "type": "new",
+      "sale": 1,
+      "salePrice": 42.33,
+      "sizing": ["s","m","l","xl"],
+      "images_list": [
+        "./assets/images/product/sp21_1.webp",
+        "./assets/images/product/sp21_2.webp",
+        "./assets/images/product/sp21_3.webp",
+        "./assets/images/product/sp21_4.webp",
+        "./assets/images/product/sp21_5.webp"
+
+      ],
+      "smalldes" :"Padded with high loft batting - Durable water-repellent coating - Pocketable design.",
+      "description": " - Fitted cut in stretchy cotton ribbed fabric.<br>- Cropped length.<br>- Rounded crew neck and short sleeves.<br>- Perfect for styling with jeans or any other bottoms.<br>- Pairs well with high-waisted bottoms or with leggings for a sporty look."
+    }
+  ]
+}

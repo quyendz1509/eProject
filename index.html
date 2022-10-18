@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- style -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/aos.css">
+    <link rel="stylesheet" href="./assets/css/animated.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
+
+    <title>Madam’s Boutique</title>
+</head>
+<body>
+    <div id="loading-web">
+        <img src="./assets/images/logo.png" class="animate__animated  animate__infinite animate__slow animate__fadeIn" alt="Loading">
+    </div>
+    <!-- header -->
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <!--nav -->
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="./"><img src="./assets/images/logo.png" width="100%" alt="Madam’s Boutique Logo"></a>
+                      <div class="d-flex order-lg-2">
+                        <div>
+                            <ul class="nav header-user">
+                                <li class="nav-item d-none d-md-block">
+                                    <div class="dropdown-center">
+                                     <a class=" d-flex flex-column justify-content-center align-items-center" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false" href="#"> 
+                                        <i data-feather="user"></i>
+                                        <span>User</span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li><a class="dropdown-item" href="./register.html">Register</a></li>
+                                        <li><a class="dropdown-item" href="./login.html">Login</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class=" d-flex flex-column justify-content-center align-items-center" href="#"> 
+                                    <i data-feather="heart"></i>
+                                    <span>Wishlist</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                               <div class="dropdown-center">
+                                 <a class=" d-flex flex-column justify-content-center align-items-center" data-bs-auto-close="false" data-bs-toggle="dropdown" aria-expanded="false" href="#"> 
+                                    <i data-feather="shopping-cart"></i>
+                                    <span>Cart</span>
+                                    <span class="badge-cart total-cart-quantity">0</span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end container" id="cart-header">
+                                    <!-- item cart -->
+                                    <ul class="nav">
+                                        <!-- Start item cart -->
+
+                                        <!-- End item cart -->
+                                    </ul>
+                                    <!-- item cart -->
+                                    <div class="d-flex justify-content-between pt-2">
+                                      <span>Total Quantity:</span>
+                                      <span class="fw-bold text-custom-info total-cart-quantity">0</span>
+                                  </div>
+                                  <div class="d-flex justify-content-between pt-2 pb-3">
+                                      <span>Total Cost:</span>
+                                      <span class="fw-bold text-custom-success total-cost">$0</span>
+                                  </div>
+                                  <div>
+                                      <a href="./cart.html" class="w-100 btn-view-cart">View Cart</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+
+
+                  </ul>
+              </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+               <i data-feather="menu"></i>
+           </button>
+       </div>
+       <div class="collapse navbar-collapse" id="navbarHeader">
+        <ul class="navbar-nav  mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="./">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./categories.html">Categories</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="./aboutUs.html">About Us</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="./contactUs.html">Contact</a>
+            </li>
+            <li class="nav-item d-block d-md-none dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">User</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="./register.html">Register</a></li>
+                    <li><a class="dropdown-item" href="./login.html">Login</a></li>
+                </ul>
+
+
+            </li>
+        </ul>
+
+    </div>
+</div>
+</nav>
+</div>
+</div>
+</header>
+<!-- end header -->
+<!-- wrapper -->
+<div class="wrapper">
+    <!-- big banner -->
+    <div class="swiper bannerSwiper">
+
+      <div class="swiper-wrapper">
+        <!-- item banner -->
+        <div class="swiper-slide banner">
+            <div>
+                <div class="banner-mobile-backdrop"> </div>
+                <img src="./assets/images/banner3.jpg" width="100%" alt="banner">
+
+            </div>
+            <div class="banner-content text-center">
+                <h1 class="banner-content-title bct-fade">Final Clearance 
+                   <br> Up to 80% Off</h1>
+                   <div class="banner-content-subtitle bcts-fade">
+                    <p>
+                      New Style - New Arrival - New LifeStye 
+                  </p>
+                  <a href="./categories.html" class="btn-custom-primary text-light">View More</a>
+              </div>
+          </div>
+      </div>
+      <!-- item banner -->
+      <div class="swiper-slide banner">
+        <div>
+            <div class="banner-mobile-backdrop"> </div>
+            <img src="./assets/images/banner.jpg" width="100%" alt="Banner ">
+        </div>
+
+        <div class="banner-content text-center">
+            <h1 class="banner-content-title bct-fade-1"> Madam’s Boutique <br>
+            Demo</h1>
+            <div class="banner-content-subtitle bcts-fade-1">
+             <p >
+                 Style For Women
+             </p>
+             <a href="./categories.html" class="btn-custom-primary text-light">View More</a>
+         </div>
+     </div>
+ </div>
+
+
+</div>
+<div class="banner-button-next button-next button-slider-nav"><i data-feather="chevron-right"></i></div>
+<div class="banner-button-prev button-prev button-slider-nav"><i data-feather="chevron-left"></i></div>
+
+</div>
+<!-- end big banner -->
+<div class="wrapper-body">
+    <!-- Danh mục sản phẩm -->
+    <div class="section-categories pt-5 pb-5">
+        <div class="text-center">
+            <h1 class="d-inline-block text-uppercase fw-bold text-title-decoration">Categories Product</h1>
+        </div>
+        <!-- product promo -->
+        <div id="load-data-categories">
+         <div class="text-center">
+          <span>Loading..</span>
+      </div>
+  </div>
+  <!--  -->
+</div>
+
+<!-- Sale -->
+<div class="section-sale pt-5 pb-5">
+  <div class="text-center">
+    <h1 class="d-inline-block text-uppercase fw-bold text-title-decoration">Sale Product</h1>
+</div>
+<!-- product promo -->
+<div id="load-data-sale">
+  <div class="text-center">
+      <span>Loading..</span>
+  </div>
+</div>
+<!--  -->
+</div>
+<!-- End sale -->
+<!-- Sản phẩm dành cho bạn-->
+<div class="section-adser pt-5 pb-5">
+ <!-- product promo -->
+ <div class="container">
+    <div class="row ">
+        <!--  -->
+        <div class="col-12 col-lg-6 mb-3">
+           <div class="ads-info" data-aos="fade-up" data-aos-duration="1500">
+               <div>
+                <img src="./assets/images/ads.jpg" width="100%" alt="Banner">
+            </div>
+            <div class="ads-info-content">
+                <h5 class="ads-info-sub-title">TRENDING NOW</h5>
+                <h3 class="ads-info-title">Women’s Lifestyle <br> Collection</h3>
+                <a href="" class="btn-ads-info">Shop Now <i data-feather="arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="col-12 col-lg-6 mb-3">
+       <div class="ads-info" data-aos="fade-up" data-aos-duration="1500">
+        <div>
+            <img src="./assets/images/ads2.jpg" width="100%" alt="Banner">
+        </div>
+        <div class="ads-info-content">
+            <h5 class="ads-info-sub-title">TRENDING NOW</h5>
+            <h3 class="ads-info-title">2022 Fall/Winter<br> Collection</h3>
+            <a href="" class="btn-ads-info">Shop Now <i data-feather="arrow-right"></i></a>
+        </div>
+
+    </div>
+</div>
+<!--  -->
+</div>
+</div>
+<!--  -->
+</div>
+<!-- End product for you -->
+<!-- Sale -->
+<div class="section-new pt-5 pb-5">
+  <div class="text-center">
+    <h1 class="d-inline-block text-uppercase fw-bold text-title-decoration">New Arrivals</h1>
+</div>
+<!-- product promo -->
+<div id="load-data-newarrival">
+    <div class="text-center">
+      <span>Loading..</span>
+  </div>
+</div>
+<!--  -->
+</div>
+<!-- End sale -->
+
+<!-- Sản phẩm dành cho bạn-->
+<div class="section-foryou pt-5 pb-5">
+   <div class="text-center ">
+    <h1 class="d-inline-block text-uppercase fw-bold text-title-decoration">Recommended For You</h1>
+</div>
+<!-- product promo -->
+<div id="load-data-recommend">
+   <span>Loading...</span>
+</div>
+<!--  -->
+</div>
+<!--  -->
+<!-- End product for you -->
+<!-- service -->
+<div class="section-service pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-lg-3 col-md-6 mb-3">
+                <div class="d-flex align-items-center  justify-content-start">
+                    <div>
+                        <img src="./assets/images/freeship.png" width="40px" alt="">
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="fw-bold text-uppercase m-0">Free shipping</h6>
+                        <p class="m-0">
+                            On all order
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3 col-md-6 mb-3">
+                <div class="d-flex align-items-center  justify-content-start">
+                    <div>
+                        <img src="./assets/images/support.png" width="40px" alt="">
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="fw-bold text-uppercase m-0">Support 24/7</h6>
+                        <p class="m-0">
+                            Always 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3 col-md-6 mb-3">
+                <div class="d-flex align-items-center  justify-content-start">
+                    <div>
+                        <img src="./assets/images/refund.png" width="40px" alt="">
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="fw-bold text-uppercase m-0">Money Refund</h6>
+                        <p class="m-0">
+                            50% Bill
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3 col-md-6 mb-3">
+                <div class="d-flex align-items-center  justify-content-start">
+                    <div>
+                        <img src="./assets/images/sale.png" width="40px" alt="">
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="fw-bold text-uppercase m-0">Order Discount</h6>
+                        <p class="m-0">
+                            All Day
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+</div>
+<!-- End Service -->
+</div>
+</div>
+<!-- end-wrapper -->
+<footer class="pt-5">
+    <div class="container">
+        <div class="row" >
+            <div class="col-12 col-lg-2 mb-3">
+             <img src="./assets/images/logo.png" width="180px" alt="">
+             <p class="mt-2 mb-0">Madam’s Boutique is the leading store of branded and designer clothes for women.
+             </p>
+         </div>
+         <div class="col-12 col-lg-2 mb-3">
+            <h3 class="fw-bold fs-6 text-uppercase">Site Map</h3>
+            <ul class="nav flex-column">
+             <li class="nav-item"><a href="">Home Page</a></li>
+             <li class="nav-item"><a href="">Shop</a></li>
+             <li class="nav-item"><a href="">About Us</a></li>
+             <li class="nav-item"><a href="">Contact Us</a></li>
+         </ul>
+     </div> 
+     <div class="col-12 col-lg-2 mb-3">
+        <h3 class="fw-bold fs-6 text-uppercase">CATEGORIES</h3>
+        <ul class="nav flex-column">
+         <li class="nav-item"><a href="#">Jewels</a></li>
+         <li class="nav-item"><a href="#">Clothing</a></li>
+         <li class="nav-item"><a href="#">Shoe</a></li>
+         <li class="nav-item"><a href="#">Accessory</a></li>
+     </ul>
+ </div> 
+ <div class="col-12 col-lg-2 mb-3">
+    <h3 class="fw-bold fs-6 text-uppercase">Follow Us</h3>
+    <ul class="nav flex-column">
+     <li class="nav-item"><a href="#">Facebook</a></li>
+     <li class="nav-item"><a href="#">Instagram</a></li>
+     <li class="nav-item"><a href="#">Youtube</a></li>
+     <li class="nav-item"><a href="#">Tiktok</a></li>
+ </ul>
+</div>   
+<div class="col-12 col-lg-4 mb-3">
+    <h3 class="fw-bold fs-6 text-uppercase">Contact US</h3>
+    <p class="m-0">
+       Sign Up To Newsletter and receive $20 coupon for first shopping and free delivery.
+   </p>
+   <div class="input-group">
+
+      <input type="text" class="form-control" placeholder="Enter Your E-mail">
+      <button class="btn-custom-primary">Subscribe</button>
+  </div>
+</div>
+</div>
+</div>
+<div class="text-center pt-3 pb-3" style="background-color: #fafafa;">
+    <span>Power by Madam’s Boutique @ 2022 </span>
+</div>
+</footer>
+<!-- script -->
+
+<!-- Js -->
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/feather.min.js"></script>
+<script src="./assets/js/swiper-bundle.min.js"></script>
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/aos.js"></script>
+<script src="./assets/js/sweetalert2.all.min.js"></script>
+
+<!-- <script src="https://unpkg.com/@popperjs/core@2"></script> -->
+<script src="./assets/js/script.js"></script>
+<script src="./assets/js/cart.js"></script>
+<script src="./assets/js/home.js"></script>
+
+</body>
+</html>
