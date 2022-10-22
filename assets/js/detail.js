@@ -47,11 +47,16 @@ $(document).ready(function() {
            loop: true,
            slidesPerView: 4,
            freeMode: true,
+
            watchSlidesProgress: true,
        });
         new Swiper(".detailSwiper", {
          lazy: true,
          loop: true,
+          autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
          navigation: {
           nextEl: ".carou-button-next",
           prevEl: ".carou-button-prev",
