@@ -48,17 +48,18 @@ $(document).ready(function() {
 			<button class="btn-add-to-cart" data-id="${element.id}"><i data-feather='shopping-cart'></i></button>
 
 			</div>
-			<a href="./detail.html?id=${element.id}">
+			
 			<div class="card-custom-img">
-			<img src="${element.images}" width="100%" alt="${element.name}">
+			<a href="./detail.html?id=${element.id}"><img src="${element.images}" width="100%" alt="${element.name}"></a>
+			<button class="compare" data-id="${element.id}">Compare</button>
 			</div>
 			<div class="card-custom-content newa-content">
-			<h6 class="fw-bold m-0">${element.name}</h6>
+			<a href="./detail.html?id=${element.id}"><h6 class="fw-bold m-0">${element.name}</h6></a>
 			<span>${element.categories} -  ${element.type}</span>
 			<p class="m-0"> ${sizer_vl}</p>
 			<p class="m-0 fw-bold fs-5">${price}</p>
 			</div>
-			</a>
+			
 			</div>
 
 			<!-- end -->
@@ -139,7 +140,160 @@ $(document).ready(function() {
 		let type_checked =  $('#type-search').find('input:checked').data('type');
 		let slug = $('#list-item-cate li>button.active').data('slug');
 		loadProductCate(slug,noidung,sizing_checked,type_checked);
+	});
+	// compare add
+	let compare = [];
+	let compare_value_render = $('#compare-mini');
+	let compare_value_render_large = $('#compare-large');
 
+
+
+	$('#product-incate').on('click', '.compare', function(event) {
+		event.preventDefault();
+		/* Act on the event */
+		let id = $(this).data('id');
+		let test = callProductId(id);
+		// fetdata
+		test.then( (val)=>{
+			if(compare.length > 1){
+				Swal.fire({
+					position: 'center',
+					icon: 'error',
+					title: 'You can only add up to 3 products.',
+					showConfirmButton: true,
+					confirmButtonColor: '#7c3aed',
+				})
+			}else{
+			compare.push(val); // đưa dữ liệu vào mảng tạm thời
+			renderCompare(compare,compare_value_render);
+		}
+	} )
+
+		// fetch data
 	});
 
+	let renderCompare = (compare,compare_value_render)=>{
+		if(compare.length < 1){
+			compare_value_render.html('');
+
+		}else{
+			let noidung = `<div class="container">
+			<div class="row pt-3 pb-3">
+			<div class="col-3"></div>
+			<div class="col-6">
+			<div class="row">
+			`;
+
+			compare.map( (valer,index) =>{
+				noidung +=  `<div class="col-6 text-center">
+				<div class="item-compare">
+				<img src="${valer.images}" width='100%' class="card-img-top rounded-3 shadow-sm" alt="${valer.name}">
+				<button data-index="${index}"><i data-feather="x-circle"></i></button>
+				</div>
+				</div>
+
+				`;	
+			} )
+			noidung +=`
+			</div>
+			</div>
+			<div class="col-3"></div>
+			<div class="col-12 mt-3 text-center">
+			<button class="btn-custom-primary compare-submit">Compare</button>
+			</div>
+			</div></div>`;
+			compare_value_render.html(noidung);
+			feather.replace();
+			
+
+		}
+
+	}
+
+	let renderCompareLarge = (compare,compare_value_render)=>{
+		if(compare.length < 1){
+			compare_value_render.html('');
+
+		}else{
+			let noidung = `<div class="container">
+			<div class="row pt-3 pb-3">
+			<div class="col-3"></div>
+			<div class="col-6">
+			<div class="item-compare-large">
+			<table class="table table-bordered text-center">
+			`;
+
+			let result = ["images","name","price","sizing","type","categories","description"];
+			result.forEach( valx => {
+				noidung +='<tr>';
+				compare.forEach(function(elem) {
+					switch(valx) {
+						case "images":
+						noidung += `<td> <img src="${elem.images}" width="100%" alt=""> </td>`;
+						break;
+						case "name":
+						noidung += `<td> <strong>${elem.name}</strong> </td>`;
+						break;
+						case "price":
+						noidung += `<td> <strong class="text-custom-primary">$${new Intl.NumberFormat().format(elem.price)}</strong> </td>`;
+						break;
+						case "sizing":
+						noidung += `<td> </td>`;
+						break;
+						case "price":
+						noidung += `<td> <strong class="text-custom-primary">$${new Intl.NumberFormat().format(elem.price)}</strong> </td>`;
+						break;
+					}
+
+
+				})
+				noidung +='<tr>';
+			})
+
+
+			noidung +=`
+			
+			</table>
+			</div>
+			
+			</div>
+			<div class="col-3"></div>
+			</div></div>`;
+			compare_value_render.html(noidung);
+			feather.replace();
+			
+
+		}
+
+	}
+	let  callProductId =  async (id)=>{
+		let url = 'http://localhost:3000/products/'+id;
+		let res = await fetch( url );
+		let datab = await res.json();
+		return datab;
+	}
+	// remove compare 
+	$('#compare-mini').on('click', '.item-compare button', function(event) {
+		event.preventDefault();
+		/* Act on the event */
+		let indexer = $(this).data('index');
+		compare.splice(indexer,1);
+		renderCompare(compare,compare_value_render);
+	});
+	$('#compare-mini').on('click', '.compare-submit', function(event) {
+		event.preventDefault();
+		if (compare.length < 2) {
+			Swal.fire({
+				position: 'center',
+				icon: 'error',
+				title: 'You need add 2 product to compare.',
+				showConfirmButton: true,
+				confirmButtonColor: '#7c3aed',
+			})
+		}else{
+			renderCompareLarge(compare,compare_value_render_large);
+			compare_value_render_large.slideDown('500');
+
+		}
+	})
 });
