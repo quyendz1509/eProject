@@ -159,7 +159,7 @@ $(document).ready(function() {
 				Swal.fire({
 					position: 'center',
 					icon: 'error',
-					title: 'You can only add up to 3 products.',
+					title: 'You can only add up to 2 products.',
 					showConfirmButton: true,
 					confirmButtonColor: '#7c3aed',
 				})
@@ -215,50 +215,84 @@ $(document).ready(function() {
 			compare_value_render.html('');
 
 		}else{
-			let noidung = `<div class="container">
+			let noidung = `
+			<div class="container-fluid">
 			<div class="row pt-3 pb-3">
-			<div class="col-3"></div>
-			<div class="col-6">
-			<div class="item-compare-large">
-			<table class="table table-bordered text-center">
-			`;
 
-			let result = ["images","name","price","sizing","type","categories","description"];
-			result.forEach( valx => {
-				noidung +='<tr>';
-				compare.forEach(function(elem) {
-					switch(valx) {
-						case "images":
-						noidung += `<td> <img src="${elem.images}" width="100%" alt=""> </td>`;
-						break;
-						case "name":
-						noidung += `<td> <strong>${elem.name}</strong> </td>`;
-						break;
-						case "price":
-						noidung += `<td> <strong class="text-custom-primary">$${new Intl.NumberFormat().format(elem.price)}</strong> </td>`;
-						break;
-						case "sizing":
-						noidung += `<td> </td>`;
-						break;
-						case "price":
-						noidung += `<td> <strong class="text-custom-primary">$${new Intl.NumberFormat().format(elem.price)}</strong> </td>`;
-						break;
+			<div class="col-12">
+			<div class="item-compare-large card">
+			<div class="card-header">
+			<div class="d-flex justify-content-between align-items-center">
+			<h6 class="m-0">Product Comparision</h6>
+			<button class="btn-close-danger close-compare"><i data-feather="x"></i></button>
+			</div>
+			</div>
+			<div class="card-body pt-3 pb-3 table-responsive">
+			<table class="table table-bordered w-100">
+			<tr></tr>
+			`;
+			const propertyNames = Object.keys(compare[0]);
+
+			propertyNames.map( (val_1,key)=>{
+				switch(val_1){
+					case 'images_list':
+					noidung +='';
+					break;
+					case 'description':
+					noidung +='';
+					break;
+					case 'recommended':
+					noidung +='';
+
+					break;
+					case 'sale':
+					noidung +='';
+
+					break;
+					case 'smalldes':
+					noidung +='';
+					break;
+					default:
+					noidung += `<tr>
+					<th>${val_1}</th>
+					`;
+				// chạy vòng lặp sản phẩm
+				compare.map( (val_2)=>{
+					const tester = Object.values(val_2);
+					if (val_1 == 'images') {
+						noidung +=`<td><img src="${tester[key]}" width="120px" alt=""></td>`;
+					}else if(val_1 == 'price' || val_1 == 'salePrice'){
+						noidung +=`<td>$${new Intl.NumberFormat().format(tester[key])}</td>`;
+					}else if(val_1 == 'type'){
+						noidung +=`<td>${ (tester[key] == 'hot') ? '<span class="badge bg-danger">HOT</span>' : '<span class="badge bg-primary">NEW</span>' }</td>`;
+					}
+					else if(val_1 == 'sizing'){
+						noidung += `<td>`;
+						tester[key].map( sz =>{
+							noidung +=`<span class='me-2 badge border text-dark text-uppercase'>${sz}</span>`;
+						} )
+						noidung +=`</td>`;
+					}
+					else{
+
+						noidung +=`<td>${tester[key]}</td>`;
 					}
 
 
-				})
-				noidung +='<tr>';
-			})
+				} )
 
-
-			noidung +=`
+				noidung += `</tr>`;
+				break;
+			}
+		} )
 			
+			noidung +=`
 			</table>
 			</div>
-			
 			</div>
-			<div class="col-3"></div>
-			</div></div>`;
+			</div>
+			</div>
+			</div>`;
 			compare_value_render.html(noidung);
 			feather.replace();
 			
@@ -296,4 +330,9 @@ $(document).ready(function() {
 
 		}
 	})
+	$('#compare-large').on('click', '.close-compare', function(event) {
+		event.preventDefault();
+		/* Act on the event */
+		compare_value_render_large.slideUp('500');
+	});
 });

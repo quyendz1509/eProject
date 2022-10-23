@@ -206,7 +206,7 @@
       "images": "./assets/images/product/sp8.jpg",
       "recommended": false,
       "type": "hot",
-      "sale": 1,
+      "sale": 0,
       "salePrice": 42.33,
       "sizing": ["s","m","l","xl"],
       "images_list": [

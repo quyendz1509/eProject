@@ -3,6 +3,7 @@ $(document).ready(function() {
      // lấy dữ liệu về
      let id = getParamer('id');
      getDetailProduct(id);
+     let addToCartBtn = $('.add-to-card-detail');
      async function getDetailProduct(id){
         let url = `http://localhost:3000/products?id=${id}`;
         let res = await fetch(url);
@@ -25,6 +26,8 @@ $(document).ready(function() {
             </div>`;
         } )
         // load typer
+        // console.log(data[0].id);
+        addToCartBtn.attr('data-id',data[0].id);
         typerload.html(typer);
         // small des
         smalldes.html( data[0].smalldes);
@@ -44,28 +47,49 @@ $(document).ready(function() {
         } )
         // recall swipper
         let swiper_thumb_re =  new Swiper(".mySwiperThumber", {
-           loop: true,
-           slidesPerView: 4,
-           freeMode: true,
-
-           watchSlidesProgress: true,
-       });
-        new Swiper(".detailSwiper", {
-         lazy: true,
          loop: true,
-          autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-         navigation: {
-          nextEl: ".carou-button-next",
-          prevEl: ".carou-button-prev",
-      },
-      thumbs: {
-          swiper: swiper_thumb_re,
-      },
-  });
+         slidesPerView: 4,
+         freeMode: true,
+
+         watchSlidesProgress: true,
+     });
+        new Swiper(".detailSwiper", {
+           lazy: true,
+           loop: true,
+           autoplay: {
+              delay: 2500,
+              disableOnInteraction: false,
+          },
+          navigation: {
+              nextEl: ".carou-button-next",
+              prevEl: ".carou-button-prev",
+          },
+          thumbs: {
+              swiper: swiper_thumb_re,
+          },
+      });
 
     }
+    // thêm vào giỏ hàng
+    addToCartBtn.click(function(event) {
+        /* Act on the event */
+        let __cart = (sessionStorage.getItem("cart")) ? JSON.parse(sessionStorage.getItem("cart")) : new Array();
+        let _amount_cart = 0;
+        let id = $(this).data('id');
+        let size = $('#size-detail').val();
+        let quanty = $('#quantity-detail').val();
+        /* Act on the event */
+        let url = `http://localhost:3000/products/${id}`;
+        $.ajax({
+            url: url,
+            type: 'GET',
+        })
+        .done(function(res) {
+            addToCart(res,parseInt(quanty),__cart,_amount_cart,size);
+        })
 
+        .fail(function() {
+            console.log("error");
+        });
+    });
 });
