@@ -35,7 +35,25 @@ $(document).ready(function () {
       prevEl: ".banner-button-prev",
     },
   } );
+   $.ajax({
+    url: 'http://localhost:3000/categories',
+    type: 'GET'
+  })
+   .done(function(res) {
 
+    let noidungfooter = ``;
+// Chạy vòng lặp
+res.map( (value)=>{
+
+  noidungfooter += `  <li class="nav-item"><a href="./categories.html?id=${value['slug']}">${value['title']}</a></li>`;
+
+ });
+
+$('#footer-cate').html(noidungfooter);
+})
+.fail(function() {
+  alert("Không thể kết nối tới server");
+});
 });
   // check scroll
   let lastScrollTop = 10;
@@ -61,5 +79,7 @@ $(document).ready(function () {
        });
      }
    }
-
  });
+
+
+  //

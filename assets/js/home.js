@@ -44,7 +44,7 @@ cate_sec.html(noidungform); // load nội dung
     let noidung = `  <div class="col-12 col-lg-5 mb-3">
     <div class="card-custom">
     <div class="card-custom-wishlist">
-    <button><i data-feather='heart'></i></button>
+   
     <button class="btn-add-to-cart" data-id="${res[0]['id']}"><i data-feather='shopping-cart'></i></button>
 
     </div>
@@ -66,7 +66,7 @@ for (var i = 1; i < res.length; i++) {
   <div class="col-6 col-lg-4 mb-4">
   <div class="card-custom">
   <div class="card-custom-wishlist">
-  <button><i data-feather='heart'></i></button>
+ 
   <button class="btn-add-to-cart" data-id="${res[i]['id']}"><i data-feather='shopping-cart'></i></button>
 
   </div>
@@ -114,7 +114,7 @@ sale_sec.html(noidungform); // load nội dung
   let noidung = `  <div class="col-12 col-lg-5 mb-3">
   <div class="card-custom">
   <div class="card-custom-wishlist">
-  <button><i data-feather='heart'></i></button>
+ 
   <button class="btn-add-to-cart" data-id="${res[0]['id']}"><i data-feather='shopping-cart'></i></button>
 
   </div>
@@ -136,7 +136,7 @@ for (var i = 1; i < res.length; i++) {
   <div class="col-6 col-lg-4 mb-4">
   <div class="card-custom">
   <div class="card-custom-wishlist">
-  <button><i data-feather='heart'></i></button>
+ 
   <button class="btn-add-to-cart" data-id="${res[i]['id']}"><i data-feather='shopping-cart'></i></button>
 
   </div>
@@ -187,7 +187,7 @@ res.map( (value)=>{
    <div class="swiper-slide">
    <div class="card-custom">
    <div class="card-custom-wishlist">
-   <button><i data-feather='heart'></i></button>
+  
    <button class="btn-add-to-cart" data-id="${value['id']}"> <i data-feather="shopping-cart"></i></button>
    </div>
    <a href="./detail.html?id=${value['id']}">

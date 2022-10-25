@@ -44,7 +44,6 @@ $(document).ready(function() {
 			<div class="card-custom position-relative">
 			${typer}
 			<div class="card-custom-wishlist">
-			<button><i data-feather='heart'></i></button>
 			<button class="btn-add-to-cart" data-id="${element.id}"><i data-feather='shopping-cart'></i></button>
 
 			</div>

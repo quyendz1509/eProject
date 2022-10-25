@@ -34,7 +34,7 @@ $(document).ready(function() {
         // big image
         detailWraper.html(noidung);
         // title
-        title.html( data[0].name );
+        title.html( data[0].name ).attr('href', './detail.html?id='+data[0].id);
         // price
         price.html(`${price_handle}` );
         // descript
