@@ -30,35 +30,35 @@
             <div class="d-flex">
                 <div class="flex-left">
                     <div class="container">
-                        <from class="card p-3 shadow animate__animated animate__backInDown">
+                        <from class="card p-3 shadow animate__animated animate__backInDown" >
                           <div class="card">
                             <div class="col-12 text-center mb-3">
-                               <a href="./"> <img src="./assets/images/logo.png" alt="Madam’s Boutique"></a>
-                           </div> 
-                           <div class="col-12 mb-3">
-                            <input type="text" class="form-control" placeholder="Username">
+                             <a href="./"> <img src="./assets/images/logo.png" alt="Madam’s Boutique"></a>
+                         </div> 
+                         <div class="col-12 mb-3">
+                            <input name="user" type="text" class="form-control" placeholder="Username">
                         </div>   
                         <div class="col-12 mb-3">
-                            <input type="text" class="form-control" placeholder="**********">
+                            <input name="pass" type="password" class="form-control" placeholder="**********">
                         </div>  
                         <div class="col-12 mb-2">
-                           <button class="btn-custom-primary w-100">Log in</button>
+                            <button class="btn-custom-primary w-100" id="form-login">Log in</button>
 
-                       </div>  
-                       <div class="col-12 text-center mb-2">
-                        <a href="./register.html" class="text-uppercase fw-bold ">Create An Account </a>
+                        </div>  
+                        <div class="col-12 text-center mb-2">
+                            <a href="./register.html" class="text-uppercase fw-bold ">Create An Account </a>
+                        </div>
+                        <div class="col-12 text-center">
+                            <a href="./" class="fw-thin text-decoration-underline">Forgot your password? </a>
+                        </div>
                     </div>
-                    <div class="col-12 text-center">
-                        <a href="./" class="fw-thin text-decoration-underline">Forgot your password? </a>
-                    </div>
-                </div>
-            </from>
+                </from>
+            </div>
+        </div>
+        <div class="flex-right">
+            <img src="./assets/images/banner5.jpg" width="100%" alt="Madam’s Boutique">
         </div>
     </div>
-    <div class="flex-right">
-        <img src="./assets/images/banner5.jpg" width="100%" alt="Madam’s Boutique">
-    </div>
-</div>
 </div>
 </div>
 <!-- end-wrapper -->
@@ -80,6 +80,34 @@
 
 <!-- <script src="https://unpkg.com/@popperjs/core@2"></script> -->
 <script src="./assets/js/script.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#form-login').click(function(event) {
+            /* Act on the event */
+            event.preventDefault();
+            let username = $('input[name="user"]').val();
+            let password = $('input[name="pass"]').val();
+            if (username == '' || password =='') {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    html: 'information cannot be left blank'
+                })
+            }else{
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success...',
+                    html: 'Login Success'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location="./";
+                    }
+                })
+            }
+        });
+    });
+</script>
 
 </body>
 </html>

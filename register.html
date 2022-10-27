@@ -31,46 +31,46 @@
                 <div class="flex-left">
                     <div class="container">
                         <from action="/" class="card p-3 shadow animate__animated animate__backInDown">
-                         <div class="row">
-                          <div class="col-12 text-center mb-3">
-                           <a href="./"> <img src="./assets/images/logo.png" alt="Madam’s Boutique"></a>
-                       </div> 
-                       <div class="col-6 mb-3">
-                        <input type="text" class="form-control" placeholder="First Name" >
-                    </div>   
-                    <div class="col-6 mb-3">
-                        <input type="text" class="form-control" placeholder="Last Name">
-                    </div> 
-                    <div class="col-12 mb-3">
-                        <input type="text" class="form-control" placeholder="Username">
-                    </div> 
-                    <div class="col-12 mb-3">
-                        <input type="password" class="form-control" placeholder="*******">
-                    </div>  
-                    <div class="col-12 mb-3">
-                        <input type="email" class="form-control" placeholder="Email">
-                    </div> 
-                    <div class="col-12 mb-3">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="flexCheckDefault">
-                          <label class="form-check-label" for="flexCheckDefault">
-                            I agree to the TERMS OF USE and PRIVACY POLICY
-                        </label>
+                           <div class="row">
+                              <div class="col-12 text-center mb-3">
+                                 <a href="./"> <img src="./assets/images/logo.png" alt="Madam’s Boutique"></a>
+                             </div> 
+                             <div class="col-6 mb-3">
+                                <input name="first" type="text" class="form-control" placeholder="First Name" >
+                            </div>   
+                            <div class="col-6 mb-3">
+                                <input name="last" type="text" class="form-control" placeholder="Last Name">
+                            </div> 
+                            <div class="col-12 mb-3">
+                                <input name="username" type="text" class="form-control" placeholder="Username">
+                            </div> 
+                            <div class="col-12 mb-3">
+                                <input name="password" type="password" class="form-control" placeholder="*******">
+                            </div>  
+                            <div class="col-12 mb-3">
+                                <input name="email" type="email" class="form-control" placeholder="Email">
+                            </div> 
+                            <div class="col-12 mb-3">
+                                <div class="form-check">
+                                  <input name="term" class="form-check-input" type="checkbox" id="flexCheckDefault">
+                                  <label class="form-check-label" for="flexCheckDefault">
+                                    I agree to the TERMS OF USE and PRIVACY POLICY
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-2">
+                         <button id="register" type="submit" class="btn-custom-success w-100">Register</button>
+                     </div> 
+                     <div class="col-12 text-center mb-2">
+                        <p class="m-0">Have an account?  <a href="./login.html" class=" text-decoration-underline">Login here</a></p>
                     </div>
                 </div>
-                <div class="col-12 mb-2">
-                   <button type="submit" class="btn-custom-success w-100">Register</button>
-               </div> 
-               <div class="col-12 text-center mb-2">
-                <p class="m-0">Have an account?  <a href="./login.html" class=" text-decoration-underline">Login here</a></p>
-            </div>
+            </from>
         </div>
-    </from>
-</div>
-</div>
-<div class="flex-right">
-    <img src="./assets/images/banner6.jpg" width="100%" alt="Madam’s Boutique">
-</div>
+    </div>
+    <div class="flex-right">
+        <img src="./assets/images/banner6.jpg" width="100%" alt="Madam’s Boutique">
+    </div>
 </div>
 </div>
 </div>
@@ -93,6 +93,42 @@
 
 <!-- <script src="https://unpkg.com/@popperjs/core@2"></script> -->
 <script src="./assets/js/script.js"></script>
-
+<script>
+    $(document).ready(function() {
+        $('#register').click(function(event) {
+            /* Act on the event */
+            event.preventDefault();
+            let username = $('input[name="username"]').val();
+            let first = $('input[name="first"]').val();
+            let last = $('input[name="last"]').val();
+            let email = $('input[name="email"]').val();
+            let term = $('input[name="term"]').is(':checked');
+            let password = $('input[name="password"]').val();
+            if (username == '' || password =='' || last == '' || first == '' || email == '') {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    html: 'information cannot be left blank'
+                })
+            }else if(!term){
+             Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                html: 'Please check the term'
+            })
+         }else{
+            Swal.fire({
+                icon: 'success',
+                title: 'Success...',
+                html: 'Register Success'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location="./";
+                }
+            })
+        }
+    });
+    });
+</script>
 </body>
 </html>

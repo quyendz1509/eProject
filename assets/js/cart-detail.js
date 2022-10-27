@@ -83,7 +83,7 @@
             <h4 class="m-0 fw-bold text-custom-primary">$${new Intl.NumberFormat().format(value_total_cost)}</h4>
 
             </div>
-            <button class="btn-custom-success w-100"><i data-feather="credit-card"></i> PAYMENT</button>
+            <a href="./payment.html" class="btn-custom-success w-100 text-white">PAYMENT</a>
             </div>
             </div>
             <!-- col-start -->

@@ -14,6 +14,29 @@ function getParamer(param=''){
 
 $(document).ready(function () {
 
+  $('#submit-email-footer').click(function(event) {
+    /* Act on the event */
+    event.preventDefault();
+    let email = $('input[name="footer_email"]').val();
+    if (email == '') {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        html: 'Please enter your email before click subscribe'
+      })
+    }else{
+     Swal.fire({
+      icon: 'success',
+      title: 'Success',
+      html: 'Thanks you for contact us !',
+      showConfirmButton: false,
+      timer: 1500
+    }).then((result) => {
+      location.reload();
+    })
+  }
+});
+
   // loading loading
   const loading = $('#loading-web');
   setTimeout( function(){
@@ -35,11 +58,11 @@ $(document).ready(function () {
       prevEl: ".banner-button-prev",
     },
   } );
-   $.ajax({
+  $.ajax({
     url: 'http://localhost:3000/categories',
     type: 'GET'
   })
-   .done(function(res) {
+  .done(function(res) {
 
     let noidungfooter = ``;
 // Chạy vòng lặp
@@ -47,13 +70,13 @@ res.map( (value)=>{
 
   noidungfooter += `  <li class="nav-item"><a href="./categories.html?id=${value['slug']}">${value['title']}</a></li>`;
 
- });
+});
 
 $('#footer-cate').html(noidungfooter);
 })
-.fail(function() {
-  alert("Không thể kết nối tới server");
-});
+  .fail(function() {
+    alert("Không thể kết nối tới server");
+  });
 });
   // check scroll
   let lastScrollTop = 10;
