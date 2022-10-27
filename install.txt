@@ -1,0 +1,17 @@
+**************************** SETUP GUILD ****************************
+
+- Install Tools: 
+you need install tool: "git",  "Live-server" and "Json-server"
++ Git: https://git-scm.com/downloads
++ live-server: https://www.npmjs.com/package/live-server
++ json-server: https://www.npmjs.com/package/json-server
+- Setup:
++ live-server:
+	"cd" or "git bash" in "project" Folder.
+	write command: "live-server"
++ json-server:
+	"cd" or "git bash" in "project->server" Folder.
+	write command: "json-server --watch server.json"
+---------> Then website will be run with URL: http://127.0.0.1:8080
+
+************************ END GUILD **********************************

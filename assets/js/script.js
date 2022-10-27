@@ -18,11 +18,18 @@ $(document).ready(function () {
     /* Act on the event */
     event.preventDefault();
     let email = $('input[name="footer_email"]').val();
-    if (email == '') {
+    let check = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+       if (email == '') {
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
         html: 'Please enter your email before click subscribe'
+      })
+    }else if(!check){
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        html: 'Email is not right'
       })
     }else{
      Swal.fire({
